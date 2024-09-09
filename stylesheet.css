@@ -1,0 +1,243 @@
+/* main stuff */
+:root {
+    --blau-stark: #283587;
+    --blau-schwach: #2835879f;
+    --backgroundi: white;
+}
+
+body {
+    font-family: 'Times New Roman', Times, serif;
+    margin: 0;
+    color: var(--blau-stark);
+    background-color: var(--backgroundi);
+}
+
+a, p, li, caption {
+    color: var(--blau-stark);
+    font-size: 18px;
+}
+
+a {
+    text-decoration: none;
+}
+
+ul {
+    text-align: left;
+    padding: 10px;
+    margin: 0;
+    list-style-type: "☆ ";  
+}
+
+h3 {
+    padding: 5px 0 5px 0;
+}
+
+@media screen and (max-width: 700px) {
+    nav a {
+        float: none;
+        width: 100%;
+    }
+    nav {
+        width: 100%;
+        overflow-x: auto;
+        overflow-y: hidden;
+    }
+}
+
+/* scrollbar */
+::-webkit-scrollbar {
+   width: 12px;
+   height: 12px;
+}
+
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: var(--backgroundi);
+}
+ 
+::-webkit-scrollbar-thumb {
+  background-color: var(--blau-stark);
+  border-radius: 10px;
+}
+
+
+
+/* hover */
+.hoveri {
+    transition: .3s;
+}
+
+.hoveri:hover {
+    color:white;
+    background-color: var(--blau-schwach);
+    border-radius: 8px;
+}
+
+
+
+/* darkmode */
+.dark-mode {
+    --blau-stark: cadetblue;
+    --blau-schwach: rgba(95, 158, 160, 0.55);
+    --backgroundi: black;
+}
+
+
+
+/* Header */
+header {
+    margin: 10px; 
+    padding: 10px;
+    border: 2px solid var(--blau-stark);
+    border-radius: 10px;
+    overflow-y: hidden;
+}
+
+
+
+/* Titel */
+.titel {
+    font-size: 25px;
+    text-align: center;
+    padding-top: 35px;
+    padding-bottom: 30px;
+}
+
+
+
+/* Container: Navigation, Boxen, Blätter */
+.container {
+    width: 80%;
+    margin: auto;
+    overflow-x: hidden;
+}
+
+
+
+/* Navigation */
+nav {
+    margin: auto;
+    display: inline-flex;
+    float: right;
+    overflow-y: hidden;
+}
+
+nav .nav-item {
+    background: none;
+    display: block;
+    text-align: center;
+    padding: 10px;
+    transition: .3s;
+    z-index: 1;
+    position: relative;
+}
+
+nav .nav-item:before {
+    content:"";
+    position: absolute;
+    bottom: -6px;
+    left: 0px;
+    width: 100%;
+    height: 5px;
+    background-color: var(--blau-stark);
+    border-radius: 8px 8px 0 0;
+    opacity: 0;
+    transition: .3s;
+}
+
+nav .nav-item:hover:before, nav .nav-item.current:before {
+    opacity: 1;
+    bottom: 0;
+}
+
+nav .nav-item:hover {
+    border-radius: 8px 8px 0 0;
+}
+
+nav .nav-indicator {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: 4px;
+    transition: .4s;
+    height: 3px;
+    z-index: 1;
+    border-radius: 8px 8px 0 0;
+}
+
+
+
+/* drei Boxen */
+#boxes .box_1 {
+    text-align: center;
+    float: left;
+    width: 32%;
+    margin-top: 10px;
+    
+    word-wrap: break-word;
+}
+
+#one {
+    margin-right: 5px;
+}
+
+#two {
+    margin: 0 5px 0 5px;
+}
+
+#three {
+    margin-left: 5px;
+}
+
+.box_1 ul {
+    border: 2px solid var(--blau-stark);
+    border-radius: 10px;
+    padding: 24px;
+}
+
+
+
+/* button */
+button {
+    float: left;
+    margin: 5px;
+    padding: 5px;
+    cursor: pointer;
+    background: none;
+    color: var(--blau-stark);
+    border: none;
+    font-size: 15px;
+    transition: .3s;
+}
+
+
+
+/* table */
+table {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    padding: 20px;
+    border: 2px solid var(--blau-stark);
+    border-radius: 10px;
+    background: none;
+}
+
+#zeitplan {
+    overflow-x: scroll;
+}
+
+td {
+    text-align: center;
+    padding: 5px;
+}
+
+
+
+/* Wochen */
+#wochen {
+    display: flex;
+    margin: auto;
+    width: 80%;
+}
