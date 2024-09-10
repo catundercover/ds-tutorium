@@ -1,6 +1,6 @@
 /* main stuff */
 :root {
-    --blau-stark: #283587;
+    --blau-stark: #0d185f;
     --blau-schwach: #2835879f;
     --backgroundi: white;
 }
@@ -169,7 +169,7 @@ nav .nav-indicator {
     border-radius: 8px 8px 0 0;
 }
 
- 
+
 
 /* drei Boxen */
 #boxes {
