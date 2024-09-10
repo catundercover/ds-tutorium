@@ -17,6 +17,6 @@ themeSwitch.addEventListener("click", () => {
     darkmode = localStorage.getItem('dark-mode')
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
     if (darkmode =="active") {
-        alert("Why are you switching to lightmode bro?")
+        alert("Why are you switching to light mode bro?")
     }
 })

@@ -175,6 +175,7 @@ nav .nav-indicator {
 #boxes {
     display: flex;
     align-items: center;
+    align-content: center;
     justify-content: center;
     flex-wrap: wrap;
     word-wrap: break-word;
@@ -242,4 +243,15 @@ td {
     display: flex;
     margin: auto;
     width: 80%;
+}
+
+/* Pfeil */
+.pfeili {
+    position: fixed;
+    bottom: 70%;
+    right: 10px;
+    border: 2px solid var(--blau-stark);
+    background-color: var(--backgroundi);
+    border-radius: 10px;
+    padding: 5px;
 }
