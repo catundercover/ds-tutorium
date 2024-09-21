@@ -3,7 +3,7 @@
     --blau-stark: #0d185f;
     --blau-schwach: #2835879f;
     --backgroundi: white;
-    
+    --backgroundi-schwach: #c5dbef;
 }
 
 html {
@@ -84,7 +84,7 @@ h3 {
     --blau-stark: cadetblue;
     --blau-schwach: rgba(95, 158, 160, 0.55);
     --backgroundi: black;
-    --back2: rgba(155, 212, 214, 0.55);
+    --backgroundi-schwach: rgb(22, 32, 32);
 }
 
 
@@ -94,6 +94,7 @@ header {
     margin: 10px; 
     padding: 10px;
     border: 2px solid var(--blau-stark);
+    background-color: var(--backgroundi-schwach);
     border-radius: 10px;
     overflow-y: hidden;
 }
@@ -191,6 +192,7 @@ nav {
     border: 2px solid var(--blau-stark);
     border-radius: 10px;
     padding: 24px;
+    background: var(--backgroundi-schwach);
 }
 
 
@@ -220,7 +222,7 @@ table {
     padding: 20px;
     border: 2px solid var(--blau-stark);
     border-radius: 10px;
-    background: none;
+    background: var(--backgroundi-schwach);
 }
 
 #zeitplan {
@@ -272,6 +274,7 @@ td {
     padding: 5px;
     margin-right: auto;
     margin-left: auto;
+    background: var(--backgroundi-schwach);
 }
 
 .dropdown-menu {
