@@ -3,6 +3,7 @@
     --blau-stark: #0d185f;
     --blau-schwach: #2835879f;
     --backgroundi: white;
+    
 }
 
 html {
@@ -70,7 +71,7 @@ h3 {
     transition: .3s;
 }
 
-.hoveri:hover {
+.hoveri:hover, .dropdown > button:focus {
     color:white;
     background-color: var(--blau-schwach);
     border-radius: 8px;
@@ -83,6 +84,7 @@ h3 {
     --blau-stark: cadetblue;
     --blau-schwach: rgba(95, 158, 160, 0.55);
     --backgroundi: black;
+    --back2: rgba(155, 212, 214, 0.55);
 }
 
 
@@ -108,7 +110,7 @@ header {
 
 
 
-/* Container: Navigation, Boxen, Blätter */
+/* Container: Navigation, Boxen, Blätter, Intro */
 .container {
     width: 80%;
     margin: auto;
@@ -126,7 +128,7 @@ nav {
     overflow-y: hidden;
 }
 
-nav .nav-item {
+.nav-item {
     background: none;
     display: block;
     text-align: center;
@@ -136,7 +138,7 @@ nav .nav-item {
     position: relative;
 }
 
-nav .nav-item:before {
+.nav-item:before {
     content:"";
     position: absolute;
     bottom: -6px;
@@ -149,16 +151,16 @@ nav .nav-item:before {
     transition: .3s;
 }
 
-nav .nav-item:hover:before, nav .nav-item.current:before {
+.nav-item:hover:before, .nav-item.current:before {
     opacity: 1;
     bottom: 0;
 }
 
-nav .nav-item:hover {
+.nav-item:hover {
     border-radius: 8px 8px 0 0;
 }
 
-nav .nav-indicator {
+.nav-indicator {
     position: absolute;
     left: 0;
     bottom: 0;
@@ -173,22 +175,16 @@ nav .nav-indicator {
 
 /* drei Boxen */
 #boxes {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    justify-content: center;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
     word-wrap: break-word;
+    grid-gap: 2em;
 }
 
 #boxes .box_1 {
     text-align: center;
-    float: left;
-    margin-top: 10px;
     word-wrap: break-word;
-    padding: 0 10px 0 10px;
-    word-wrap: break-word;
-    max-width: 70%;
 }
 
 .box_1 ul {
@@ -238,13 +234,6 @@ td {
 
 
 
-/* Wochen */
-#wochen {
-    display: flex;
-    margin: auto;
-    width: 80%;
-}
-
 /* Pfeil */
 .pfeili {
     position: fixed;
@@ -255,3 +244,51 @@ td {
     border-radius: 10px;
     padding: 5px;
 }
+
+
+
+/* Dropdown: Wochenblätter */
+.dropdown {
+    display: flex;
+    margin: auto;
+    padding: .5rem;
+    gap: 1rem;
+    width: 80%;
+    text-align: center;
+    position: relative;
+}
+
+.dropdown ul {
+    list-style-type: none;
+}
+
+.dropdown-menu li {
+    display: inline-block;
+}
+
+.dropdown button {
+    border: 2px solid var(--blau-stark);
+    border-radius: 10px;
+    padding: 5px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+.dropdown-menu {
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: opacity .3s ease-in-out, transform .3s ease-in-out;
+    position: absolute;
+    top: 100%;
+    background-color: var(--backgroundi);
+    padding: .75rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px 0 var(--blau-schwach);
+    pointer-events: none;
+}
+
+/*.dropdown > .hoveri:focus + .dropdown-menu, .dropdown-menu a:hover {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}*/

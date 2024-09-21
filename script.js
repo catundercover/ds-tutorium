@@ -1,3 +1,4 @@
+// darkmode
 let darkmode = localStorage.getItem('dark-mode')
 const themeSwitch = document.getElementById('theme-switch')
 
@@ -16,7 +17,23 @@ if(darkmode === "active") enableDarkmode()
 themeSwitch.addEventListener("click", () => {
     darkmode = localStorage.getItem('dark-mode')
     darkmode !== "active" ? enableDarkmode() : disableDarkmode()
-    if (darkmode =="active") {
-        alert("Why are you switching to light mode bro?")
-    }
 })
+
+
+// dropdown
+let visible = false;
+
+function toggle () {
+    if(visible) {
+        document.getElementById('wochis').style.opacity='0';
+        document.getElementById('wochis').style.transform='translateY(-10px)';
+        document.getElementById('wochis').style.pointerEvents='none';
+        visible = false;
+    } else {
+        document.getElementById('wochis').style.opacity='1';
+        document.getElementById('wochis').style.transform='translateY(0px)';
+        document.getElementById('wochis').style.pointerEvents='auto';
+        visible = true;
+        
+    }
+}
