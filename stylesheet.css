@@ -1,9 +1,9 @@
 /* main stuff */
 :root {
-    --blau-stark: #0d185f;
+    --blau-stark: #003359;
     --blau-schwach: #2835879f;
     --backgroundi: white;
-    --backgroundi-schwach: #c5dbef;
+    --backgroundi-schwach: #dbeeff;
 }
 
 html {
@@ -84,7 +84,7 @@ h3 {
     --blau-stark: cadetblue;
     --blau-schwach: rgba(95, 158, 160, 0.55);
     --backgroundi: black;
-    --backgroundi-schwach: rgb(22, 32, 32);
+    --backgroundi-schwach: rgb(0, 0, 0);
 }
 
 
