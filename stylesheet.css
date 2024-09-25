@@ -174,8 +174,15 @@ nav {
 
 
 
+/* Liste an zugänglichen Links */
+#linkis a {
+    text-decoration: underline;
+}
+
+
+
 /* drei Boxen */
-#boxes {
+.boxes {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     grid-template-rows: repeat(auto-fit, minmax(180px, 1fr));
@@ -183,12 +190,12 @@ nav {
     grid-gap: 2em;
 }
 
-#boxes .box_1 {
+.boxes .box_1 {
     text-align: center;
     word-wrap: break-word;
 }
 
-.box_1 ul {
+.box_1 ul, .box_1 p {
     border: 2px solid var(--blau-stark);
     border-radius: 10px;
     padding: 24px;
