@@ -49,6 +49,18 @@ h3 {
     }
 }
 
+::selection {
+    color: white;
+    background-color: var(--blau-schwach);
+}
+
+::-moz-selection {
+    color: white;
+    background-color: var(--blau-schwach);
+}
+
+
+
 /* scrollbar */
 ::-webkit-scrollbar {
    width: 12px;
